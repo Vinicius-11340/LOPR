@@ -1,5 +1,5 @@
 function somar_numeros() {
-    let somar_numeros = 0;
+    let soma = 0;
     let continuar = true;
 
     while (continuar) {
