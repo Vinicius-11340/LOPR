@@ -1,13 +1,8 @@
 html {
-    background-color: aqua;
+    background-color: rgb(186, 194, 194);
 }
 
 .imagem{
     text-align: center;
 }
 
-.conteudo{
-    text-align: center;
-    text-decoration:overline ;
-    
-}
