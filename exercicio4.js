@@ -1,20 +1,35 @@
-function somar_numeros() {
-    let soma = 0;
-    let continuar = true;
+function ordem() {
+    let numero = [];
+    let num = 0
+    let trocou = false;
 
-    while (continuar) {
-        let numero = parseInt(prompt("Digite um número (ou digite 0 para encerrar:)"));
+    while (num <= 3) {
+        numero[num] = parseInt(prompt("Digite um número:"));
 
-        if (isNaN(numero)) {
-            alert("Por Favor, digite um número válido!")
+        if (isNaN(numero[num])) {
+            alert("Insira um valor válido!!")
         } else {
-            soma += numero;
-        }
-
-        if (numero == 0) {
-            continuar = false;
+            num++
         }
     }
 
-    alert("A soma dos números é: " + soma);
+    numero.sort(function(a, b) {return b-a})
+
+    let tamanho = numero.length;
+
+    do {
+        trocou = false;
+        for(let i = 0; i < tamanho; i++) {
+            if (numero[i] < numero [i+1]){
+                aux1 = numero[i];
+                aux2 = numero [i+1];
+                numero[i] = aux2;
+                numero[i+1] = aux1;
+                trocou = true;
+            }
+        }
+        tamanho--; //tamanho = tamanho - 1
+    } while(trocou) 
+
+    alert(numero);
 }
